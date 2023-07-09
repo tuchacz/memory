@@ -17,4 +17,11 @@ export class CategoriesComponent {
     this.categories.push({name: this.categoryName})
     this.categoryName = "";
   }
+
+  removeCategory(category: Category) {
+    let indeOf= this.categories.indexOf(category);
+
+    this.categories.splice(indeOf, 1);
+  }
+
 }
